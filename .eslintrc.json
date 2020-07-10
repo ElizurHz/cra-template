@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-console": "off"
+  },
+  "extends": ["plugin:react/recommended", "eslint:recommended", "react-app", "plugin:prettier/recommended"]
+}
