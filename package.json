@@ -25,10 +25,7 @@
     "test:watch": "react-app-rewired test --env=jsdom --watchAll",
     "test:coverage": "react-app-rewired test --env=jsdom --coverage --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint ./src/*.ts ./src/*.tsx ./src/**/*.ts ./src/**/*.tsx"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint": "./node_modules/.bin/eslint ./src/*.js ./src/*.jsx ./src/**/*.js ./src/**/*.jsx"
   },
   "browserslist": {
     "production": [
@@ -44,6 +41,9 @@
       "ie 11"
     ]
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "babel-plugin-import": "^1.11.2",
@@ -53,7 +53,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.2",
     "eslint-config-prettier": "^4.3.0",
-    "eslint-config-react-app": "^4.0.1",
+    "eslint-config-react-app": "^5.2.1",
     "eslint-plugin-flowtype": "^3.9.1",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -86,14 +86,14 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+    "src/**/*.{js,jsx,json,css,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
+      "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
     ]
   }
